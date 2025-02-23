@@ -16,6 +16,7 @@
           <h1 class="display-1 mb-4">{% block header_text %}{% endblock %}</h1>
 
           <form method="POST" action="{% block form_action %}{% endblock %}" >
+            {% csrf_token %}
             <input
               class="form-control form-control-lg"
               name="item_text"
